@@ -62,6 +62,9 @@ header {
     transition: 0.3s;
 }
 
+.maintext{
+    color:rgb(146, 194, 249);
+}
 
 
 .para {
@@ -126,9 +129,9 @@ header {
 
 .section__title-2 {
     text-align: center;
-    font-size: 4rem;
+    font-size: 6rem;
     font-weight: bold;
-    color: #fff;
+    color: rgb(146, 194, 249);
     margin-bottom: 40px;
     text-align: left;
     padding: 10px;
@@ -230,13 +233,14 @@ header {
 /* this is for projects */
 
 .section__title-1{
-    font-size: 4rem; 
+    font-size: 5rem; 
     padding: 10px;
     line-height: 1;
     text-align: left;
     margin-left: 70px;
     margin-top: 165px;
     font-weight: bold;
+    color: rgb(146, 194, 249);
 
 }
 

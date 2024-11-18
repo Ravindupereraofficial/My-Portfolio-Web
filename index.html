@@ -33,6 +33,77 @@
 
 
     <style>
+
+.container {
+            overflow: hidden; /* Ensures animations stay within the container */
+        }
+
+        /* Left Column Animation */
+        .fade-in-left {
+            animation: fadeInLeft 1.5s ease-out;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Right Column Animation */
+        .fade-in-right {
+            animation: fadeInRight 1.5s ease-out;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .paraskill {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        .paraskill2 {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .who {
+            font-size: 2rem;
+            font-weight: bold;
+            color: rgb(146, 194, 249);
+        }
+
+        #about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .paraskill {
+                font-size: 1rem;
+            }
+
+            .who {
+                font-size: 1.5rem;
+            }
+        }
+
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -116,8 +187,8 @@
         <div class="container-fluid text-center" id="home">
             <div class="row align-items-center">
                 <!-- Column for text -->
-                <div class="col-12 col-md-6">
-                  <p class="para fade-in-up hover-highlight">Ravindu <br> Perera</p>
+                <div class="col-12 col-md-6" >
+                  <p class="para fade-in-up hover-highlight" class="maintext">Ravindu <br> Perera</p>
                   <p class="pargraphmain text-zoom">
                     As a Trainee Software Developer with a passion for UI/UX design, I go beyond
                     coding to shape meaningful user experiences. I blend functionality with aesthetics, ensuring
@@ -136,8 +207,8 @@
 
         <div class="container text-center" style="background-color: rgb(47, 49, 51);">
             <div class="row">
-
-                <div class="col">
+                <!-- Left Column with Animation -->
+                <div class="col fade-in-left">
                     <p class="paraskill">I am a full-stack developer and software enthusiast, passionate about creating
                         dynamic web and
                         mobile applications with a focus on UI/UX design. Turning ideas into pixels, one algorithm at a
@@ -147,7 +218,8 @@
                     <p class="paraskill2">My Skills Are: HTML, CSS, JavaScript, React, Java, C#, Python, PHP, SQL, Git &
                         GitHub & Figma</p>
                 </div>
-                <div class="col" id="about">
+                <!-- Right Column with Animation -->
+                <div class="col fade-in-right" id="about">
                     <p class="who">Who is Ravindu?</p>
                 </div>
             </div>
