@@ -576,7 +576,7 @@ body.loaded .preloader {
 }
 
 /* Main Content */
-main {
+#main {
     display: none;
     text-align: center;
     padding: 50px;

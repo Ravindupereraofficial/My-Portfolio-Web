@@ -11,14 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener("load", () => {
     setTimeout(() => {
         document.body.classList.add("loaded");
-    }, 3000); // Set the duration in milliseconds
+    }, 3000); 
 });
 
 
 //-------------------------------------------------------------------------------------------
 // Function to handle scroll animations
 const handleScrollAnimations = () => {
-    // Get all animated elements
+    
     const animatedElements = document.querySelectorAll(
       '.slide-left, .slide-right, .scale-up, .hidden, .rotate-in, .services__card, .projects__card'
     );
@@ -28,7 +28,7 @@ const handleScrollAnimations = () => {
       const elementBottom = element.getBoundingClientRect().bottom;
       const windowHeight = window.innerHeight;
   
-      // Check if element is in viewport
+
       if (elementTop < windowHeight * 0.8 && elementBottom > 0) {
         element.classList.add('show');
       } else {
@@ -37,28 +37,27 @@ const handleScrollAnimations = () => {
     });
   };
   
-  // Add scroll event listener
+  
   window.addEventListener('scroll', handleScrollAnimations);
   
-  // Initial check for elements in viewport
+
   document.addEventListener('DOMContentLoaded', () => {
-    // Add stagger delays to service cards
+ 
     const serviceCards = document.querySelectorAll('.services__card');
     serviceCards.forEach((card, index) => {
       card.style.transitionDelay = `${index * 0.2}s`;
     });
   
-    // Add stagger delays to project cards
     const projectCards = document.querySelectorAll('.projects__card');
     projectCards.forEach((card, index) => {
       card.style.transitionDelay = `${index * 0.2}s`;
     });
   
-    // Initial animation check
+
     handleScrollAnimations();
   });
   
-  // Smooth scrolling for navigation links
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
@@ -72,8 +71,7 @@ const handleScrollAnimations = () => {
     });
   });
   
-  // Optional: Add a small delay when removing animation classes
-  // This ensures smoother transitions when scrolling up
+
   const debounce = (func, wait) => {
     let timeout;
     return function executedFunction(...args) {
@@ -86,5 +84,5 @@ const handleScrollAnimations = () => {
     };
   };
   
-  // Use debounced version of scroll handler for better performance
+
   window.addEventListener('scroll', debounce(handleScrollAnimations, 10));
